@@ -1,7 +1,8 @@
 ember-css-vars
 ==============================================================================
 
-[Short description of the addon.]
+A [ember modifier](https://emberjs.github.io/rfcs/0373-Element-Modifier-Managers.html) to apply [css variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables).
+This gives a save way to expose data from javascript to css.
 
 
 Compatibility
@@ -22,7 +23,19 @@ ember install ember-css-vars
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+**css**
+```
+#myElement {
+  background: var(--my-color);
+}
+```
+
+**hbs**
+```
+<div id="myElement" {{css-vars my-color="blue"}}>
+  This will have a blue background
+</div>
+```
 
 
 License

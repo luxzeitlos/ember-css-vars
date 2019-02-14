@@ -1,0 +1,7 @@
+#background {
+  background: var(--my-color);
+}
+
+#font {
+  color: var(--my-color);
+}
