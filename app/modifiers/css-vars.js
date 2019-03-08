@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember._setModifierManager(
   () => ({
     createModifier(factory) {
-      return new factory();
+      return new factory.class();
     },
 
     installModifier(instance, element, args) {
