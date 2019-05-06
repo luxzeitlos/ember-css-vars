@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { visit } from '@ember/test-helpers';
+import { visit, click } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 
 function rgb(hex) {
@@ -15,5 +15,11 @@ module('Acceptance | css vars', function(hooks) {
 
     assert.dom('#background').hasStyle({ backgroundColor: rgb('#0000ff') });
     assert.dom('#font').hasStyle({ color: rgb('#0000ff') });
+  });
+
+  test('it should update the css var', async function(assert) {
+    await visit('/');
+    await click('#make-red');
+    assert.dom('#dynamic-background').hasStyle({ backgroundColor: rgb('#ff0000') });
   });
 });

@@ -11,7 +11,7 @@ export default Ember._setModifierManager(
       instance.execute(args.named);
     },
 
-    updateModifier(instance, _element, args) {
+    updateModifier(instance, args) {
       instance.execute(args.named);
     },
     destroyModifier() {},

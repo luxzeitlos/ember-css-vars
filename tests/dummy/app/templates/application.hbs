@@ -5,3 +5,7 @@
 <div id="font" {{css-vars my-color="blue"}}>
   This element uses --my-color as font color
 </div>
+
+<div id="dynamic-background" {{css-vars my-color=color}}>This text will be red after pressing the button</div>
+
+<button id="make-red" onclick={{action (mut color) "red"}}>The button</button>

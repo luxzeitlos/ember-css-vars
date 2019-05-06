@@ -1,4 +1,4 @@
-#background {
+#background, #dynamic-background {
   background: var(--my-color);
 }
 
