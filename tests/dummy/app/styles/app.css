@@ -5,3 +5,8 @@
 #font {
   color: var(--my-color);
 }
+
+#with-positional {
+  background: var(--background-color);
+  color: var(--text-color);
+}

@@ -8,17 +8,17 @@ export default Ember._setModifierManager(
 
     installModifier(instance, element, args) {
       instance.element = element;
-      instance.execute(args.named);
+      instance.execute(args.positional, args.named);
     },
 
     updateModifier(instance, args) {
-      instance.execute(args.named);
+      instance.execute(args.positional, args.named);
     },
     destroyModifier() {},
   }),
   class PerformanceModifier {
-    execute(args) {
-      Object.entries(args)
+    execute(positional, named) {
+      Object.entries(Object.assign({}, ...positional, named))
         .map(([key, val]) => [key.startsWith('--') ? key : `--${key}`, val])
         .forEach(([key, val]) => {
           this.element.style.setProperty(key, val);

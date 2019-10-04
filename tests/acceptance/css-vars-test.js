@@ -22,4 +22,12 @@ module('Acceptance | css vars', function(hooks) {
     await click('#make-red');
     assert.dom('#dynamic-background').hasStyle({ backgroundColor: rgb('#ff0000') });
   });
+
+  test('it takes a positional vars object', async function(assert) {
+    await visit('/');
+    assert.dom('#with-positional').hasStyle({
+      backgroundColor: rgb('#0000ff'),
+      color: rgb('#ff0000'),
+    });
+  });
 });
