@@ -1,7 +1,9 @@
-import Ember from 'ember';
-import { capabilities } from '@ember/modifier';
+import {
+  capabilities,
+  setModifierManager as _setModifierManager
+} from '@ember/modifier';
 
-export default Ember._setModifierManager(
+export default _setModifierManager(
   () => ({
     capabilities: capabilities('3.13'),
 
