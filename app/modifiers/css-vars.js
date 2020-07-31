@@ -1,7 +1,10 @@
 import Ember from 'ember';
+import { capabilities } from '@ember/modifier';
 
 export default Ember._setModifierManager(
   () => ({
+    capabilities: capabilities('3.13'),
+
     createModifier(factory) {
       return new factory.class();
     },
