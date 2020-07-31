@@ -8,8 +8,8 @@ This gives a save way to expose data from javascript to css.
 Compatibility
 ------------------------------------------------------------------------------
 
-* Ember.js v3.12 or above
-* Ember CLI v2.13 or above
+* Ember.js v3.13 or above
+* Ember CLI v3.13 or above
 * Node.js v10 or above
 
 
@@ -37,6 +37,11 @@ Usage
   This will have a blue background
 </div>
 ```
+
+Limitations
+------------------------------------------------------------------------------
+Because element modifiers do not run in FastBoot mode `{{css-vars}}` has no
+effect when run in FastBoot mode.
 
 
 License
